@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="methods" name="Failed suite [SampleSuite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="testSatr.triggger"/>
+  </listeners>
+  <test thread-count="1" parallel="methods" name="SampleTest(failed)">
+    <classes>
+      <class name="testSatr.testCaseOfStar">
+        <methods>
+          <include name="verifyTheDOBAcceptTheCurrentDates"/>
+          <include name="afterMethod"/>
+          <include name="verifyTheDOBAcceptTheFutureDates"/>
+          <include name="beforeMethod"/>
+          <include name="makePolicy"/>
+          <include name="verifyMobileNumberFieldLimit"/>
+        </methods>
+      </class> <!-- testSatr.testCaseOfStar -->
+    </classes>
+  </test> <!-- SampleTest(failed) -->
+</suite> <!-- Failed suite [SampleSuite] -->

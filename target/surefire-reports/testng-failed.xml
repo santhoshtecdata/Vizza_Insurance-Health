@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="methods" name="Failed suite [SampleSuite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="testSatr.triggger"/>
+  </listeners>
+  <test thread-count="2" parallel="methods" name="SampleTest(failed)" verbose="0">
+    <classes>
+      <class name="testSatr.starFlow">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="makePolicy"/>
+        </methods>
+      </class> <!-- testSatr.starFlow -->
+    </classes>
+  </test> <!-- SampleTest(failed) -->
+</suite> <!-- Failed suite [SampleSuite] -->
