@@ -12,6 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -81,7 +82,7 @@ public class TestStar extends vizzaBase {
 		q.getFilter().click();Thread.sleep(1000);
 		q.getSelectAllInFilter().click();Thread.sleep(300);
 		q.getStar().click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		q.getDummy().click();
 		Thread.sleep(1000);
 
@@ -115,7 +116,7 @@ public class TestStar extends vizzaBase {
 		p.getOccupation().click();
 		p.getBusiness().click();
 		p.getMail().sendKeys(proposerEmailID);
-		p.getPhone().sendKeys(proposerPhoneNumber);
+		p.getPhone().sendKeys("9025939106");
 		scroll(5);
 		p.getAddress1().sendKeys("36");scroll(4);
 		p.getAddress2().sendKeys(fake.address().city());scroll(4);
@@ -128,9 +129,10 @@ public class TestStar extends vizzaBase {
 		p.getAreaValue().click();
 		p.getSameusAddress().click();
 		scroll(16);
+		p.getStartDate().sendKeys(date("dd/MM/yyyy"));
 		p.getNextBtn().click();
 	}
-	@Test
+	
 	public void ckyc() throws InterruptedException, AWTException, IOException {
 
 		POMStar.ckyc c=PageFactory.initElements(driver, POMStar.ckyc.class);
@@ -158,8 +160,9 @@ public class TestStar extends vizzaBase {
 
 		file();
 		scroll(8);
+		c.getCkycAddress().click();
 		Thread.sleep(2000);
-
+         scroll(3);
 		c.getSubmitBtn().click();
 
 	}
@@ -292,6 +295,7 @@ public class TestStar extends vizzaBase {
 		ts.proposerDetails();
 		ts.ckyc();
 		ts.nom();
+		
 	}
 	@Test
 	public void com() throws InterruptedException, IOException, AWTException {
@@ -374,6 +378,37 @@ public class TestStar extends vizzaBase {
 		sq.getProceedBtn().click();
 	}
 
+	@Test
+	public void verifyCopyLink() throws AWTException {
+		until(2);
+		  Robot  r1=new Robot(); 
+			r1.keyPress(KeyEvent.VK_CONTROL);
+			r1.keyPress(KeyEvent.VK_T);
+			r1.keyRelease(KeyEvent.VK_CONTROL);
+			r1.keyRelease(KeyEvent.VK_T);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				
+				e.printStackTrace();
+			}
+			
+			window(1);
+			until(1);
+			r1.keyPress(KeyEvent.VK_CONTROL);
+			r1.keyPress(KeyEvent.VK_V);
+			r1.keyRelease(KeyEvent.VK_CONTROL);
+			r1.keyRelease(KeyEvent.VK_V);
+			
+			r1.keyPress(KeyEvent.VK_ENTER);
+			r1.keyRelease(KeyEvent.VK_ENTER);
+			
+			insuredPage i= PageFactory.initElements(driver, insuredPage.class);
+			until(3);
+			scroll(60);
+			i.getCopyLinkSubmitButton().click();
+			
+	}
 	@Test
 	public void floaterComprehensivePlan() throws InterruptedException, IOException, AWTException {
 		TestStar ts = new TestStar();

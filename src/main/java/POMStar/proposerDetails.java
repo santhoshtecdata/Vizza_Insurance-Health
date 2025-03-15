@@ -69,6 +69,19 @@ public class proposerDetails {
 	@FindBy(xpath="//mat-icon[@mattooltip='Logout']")
 	WebElement logout;
 	
+	@FindBy(xpath="//input[@data-placeholder='Policy Start Date (DD/MM/YYYY)']")
+     WebElement startDate;
+	
+	@FindBy(xpath="//input[@data-placeholder='Policy End Date (DD/MM/YYYY)']")
+	WebElement policyEndDate;
+	
+	public WebElement getPolicyEndDate() {
+		return policyEndDate;
+	}
+	
+	public WebElement getStartDate() {
+		return startDate;
+	}
 	
 	public WebElement getLogout() {
 		return logout;

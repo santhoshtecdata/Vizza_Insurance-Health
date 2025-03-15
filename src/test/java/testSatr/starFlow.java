@@ -28,6 +28,8 @@ public class starFlow extends vizzaBase{
 		test.pass("Comprehensive plan proposal is created");
 		until(10);
 		ts.copy();
+		until(2);
+		ts.verifyCopyLink();
 		test.pass("star produts verifiyed");
 		
 			}
@@ -41,10 +43,10 @@ public class starFlow extends vizzaBase{
 				// attach the report and file
 				report.attachReporter(esr);
 		
-		ExtentTest test = report.createTest("test case 1");
+				ExtentTest test = report.createTest("test case 1");
 		test.pass("click the button");
-		test.pass("success");
-		
+		test.pass("success");	
+	
 		report.flush();
 		pri("done");
 		

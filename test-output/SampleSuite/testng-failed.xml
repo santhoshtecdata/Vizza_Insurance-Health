@@ -3,19 +3,40 @@
 <suite thread-count="1" parallel="methods" name="Failed suite [SampleSuite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="testSatr.triggger"/>
+    <listener class-name="vizza_insurence.transForm"/>
   </listeners>
   <test thread-count="1" parallel="methods" name="SampleTest(failed)">
     <classes>
-      <class name="testSatr.testCaseOfStar">
+      <class name="TATA_AIG.nomineePageTestCase">
         <methods>
-          <include name="verifyTheDOBAcceptTheCurrentDates"/>
+          <include name="verifyTheNomineeNameFieldNotAcceptNumbers"/>
+          <include name="verifyIfProvideMinorAgeDOBAskingTheGuardianDetails"/>
+          <include name="verifyTheNomineeContribution"/>
           <include name="afterMethod"/>
-          <include name="verifyTheDOBAcceptTheFutureDates"/>
           <include name="beforeMethod"/>
-          <include name="makePolicy"/>
-          <include name="verifyMobileNumberFieldLimit"/>
+          <include name="verifyTheNomineeDobFieldNotAcceptTheCurrentDate"/>
         </methods>
-      </class> <!-- testSatr.testCaseOfStar -->
+      </class> <!-- TATA_AIG.nomineePageTestCase -->
+      <class name="TATA_AIG.proposerPageTestCase">
+        <methods>
+          <include name="verifyLastNameRejectsHTMLTags"/>
+          <include name="verifyFirstNameRejectsHTMLTags"/>
+          <include name="verifyPinCodeFiledNotAcceptTheChracters"/>
+          <include name="verifyPinCodeFiledNotAcceptTheSpecialChracters"/>
+          <include name="afterMethod"/>
+          <include name="vreifyProposerLastNameFieldAcceptTheAlphabetCharacters"/>
+          <include name="verifyFirstNameMinimumLength"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- TATA_AIG.proposerPageTestCase -->
+      <class name="TATA_AIG.insuredPageTestCase">
+        <methods>
+          <include name="verifyTheWeughtFieldAcceptTheSpecialCharctersOrNot"/>
+          <include name="afterMethod"/>
+          <include name="verifyTheFunctionalityOfNextButton"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- TATA_AIG.insuredPageTestCase -->
     </classes>
   </test> <!-- SampleTest(failed) -->
 </suite> <!-- Failed suite [SampleSuite] -->

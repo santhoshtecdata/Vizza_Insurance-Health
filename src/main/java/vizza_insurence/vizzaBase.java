@@ -101,7 +101,7 @@ public class vizzaBase {
 		 * r1.keyRelease(KeyEvent.VK_F12);
 		 */
 
-		
+
 		        //create a empty html file
 				 esr = new ExtentSparkReporter("./testReport.html");
 				//Actual report generate this
@@ -161,8 +161,7 @@ public class vizzaBase {
 		s.selectByVisibleText(text);
 
 	}
-	
-	public void scroll(int no)  {
+	public void scroll(int no)  {
 		Robot r1 = null;
 		try {
 			r1 = new Robot();

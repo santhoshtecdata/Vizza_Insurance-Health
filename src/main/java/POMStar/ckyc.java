@@ -44,6 +44,13 @@ public class ckyc {
 	
 	@FindBy(xpath="/html/body/div[3]/div[2]/div/mat-dialog-container/form/div[3]/button")
 	WebElement submitBtn ;
+	
+	@FindBy(xpath="(//span[text()='Same as Communication Address'])[2]")
+	WebElement ckycAddress;
+	
+	public WebElement getCkycAddress() {
+		return ckycAddress;
+	}
 
 	public WebElement getCkycNO() {
 		return ckycNO;

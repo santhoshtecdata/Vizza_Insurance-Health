@@ -43,7 +43,7 @@ public class testCase extends vizzaBase{
 		logInMotorTest l = new logInMotorTest();
 		l. login("TESTING2","2");
 		l.type("new");
-		l. GCVnewBussiness(make,model,sm);
+		l. GCVnewBussiness(make,model,sm,"","");
          String str = "chola";//UniversalSompo
 		l. getSelectProtect();
 		if (str.equals("GoDigit")) {
@@ -159,7 +159,7 @@ public void h() throws InterruptedException, AWTException, IOException {
 		
 		l.login("TESTING2","2");
 		l.type("new");
-	    l.GCVnewBussiness("TATA","LPK","1613");
+	    l.GCVnewBussiness("TATA","LPK","1613","","");
 	    
 }
 	

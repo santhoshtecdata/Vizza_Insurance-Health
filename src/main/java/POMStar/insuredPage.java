@@ -46,9 +46,11 @@ public class insuredPage {
 
 	@FindBy (xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-star-health-proposal/section[1]/div/div/div[1]/mat-horizontal-stepper/div[2]/div[2]/mat-accordion/div[3]/mat-expansion-panel/mat-expansion-panel-header")
 	WebElement insured3 ;
+	
+	@FindBy (xpath="(//span[text()='Submit'])[1]")
+	WebElement copyLinkSupmitButton;
+	
 	/*
-	@FindBy (xpath="")
-	WebElement;
 	@FindBy (xpath="")
 	WebElement ;
 
@@ -135,6 +137,9 @@ public class insuredPage {
 		return bro;
 	}
 	
+	public WebElement getCopyLinkSubmitButton() {
+		return copyLinkSupmitButton;
+	}
 	
 
 }

@@ -13,6 +13,7 @@ import com.github.javafaker.Faker;
 import POM.Quotepage;
 import POMStar.starQuotePage;
 import TataAig_POM.TataAigQuote;
+import TataAig_POM.floaterCKYC;
 import TataAig_POM.floaterNomineeElements;
 import TataAig_POM.insuredDetailsPageElements;
 import TataAig_POM.insuredPageElements;
@@ -24,16 +25,16 @@ import testSatr.TestStar;
 public class tataAig_testCase extends vizza_insurence.vizzaBase {
 	TestStar ts = new TestStar();
 	Faker fake=new Faker();
-	@Test
+	
 	public void TataAiglogin()  throws InterruptedException, IOException {
 		ts.loginWithValidCredentials("9962907312","admin1");
 	}
-	@Test
+	
 	public void tataAigQuote() throws InterruptedException, IOException {
 		ts.premiumQuotePage();
 	}
 
-	@Test
+	
 	public void floaterQuote() throws InterruptedException, IOException {
 		Thread.sleep(1000);
 		starQuotePage sq=PageFactory.initElements(driver,starQuotePage.class);
@@ -57,7 +58,7 @@ public class tataAig_testCase extends vizza_insurence.vizzaBase {
 		sq.getProceedBtn().click();
 	}
 
-	@Test
+
 	public void selectTataAigProduct() throws InterruptedException {
 
 		TataAigQuote taq = PageFactory.initElements(driver,TataAigQuote.class);
@@ -89,6 +90,17 @@ public class tataAig_testCase extends vizza_insurence.vizzaBase {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		proposerDetailsPOM pd =PageFactory.initElements(driver, proposerDetailsPOM.class);
 		pd.getTitle().click();
+		if(!pd.getTitleoption().isDisplayed()) {
+			pd.getTitle().click();
+			pd.getTitle().click();
+		}
+		if(!pd.getTitleoption().isDisplayed()) {
+			pd.getTitle().click();
+			pd.getTitle().click();
+		}
+		if(!pd.getTitleoption().isDisplayed()) {
+			pd.getTitle().click();
+		}
 		pd.getTitleoption().click();
 		pd.getFirstName().sendKeys(fake.name().firstName());
 		pd.getLastName().sendKeys("Test");
@@ -198,23 +210,15 @@ public class tataAig_testCase extends vizza_insurence.vizzaBase {
 		np.getNomineePageNxtBtn().click();
 		
 	}
-	@Test
+	
 	public void CKYCpage() throws InterruptedException, IOException {
-		TataAiglogin() ;
-		tataAigQuote();
-		selectTataAigProduct() ;
-		proposerDetailsPage();
-		insuredDetailsPage();
-		insuredPageSubmitButton();
-		nominePageDetails();
-		TestStar ts =new TestStar();
+	
 		tataAigCKYC ck =PageFactory.initElements(driver,tataAigCKYC.class);
 		until(5);
-	//	ck.getDocType().click();
-	//	ck.getSelectPan().click();
+	
 		ck.getPanNumberField().sendKeys("GLKPM3190G");
 		ck.getSubmitBtn().click();
-		until(1);
+		until(2);
 		ck.getIdType().click();
 		ck.getAadhar().click();
 		ck.getAadharNumber().sendKeys("236745678790");
@@ -226,12 +230,44 @@ public class tataAig_testCase extends vizza_insurence.vizzaBase {
 		ck.getSubmitBtn().click();
 		until(3);
 
-		ts.copy();
+		
 
 	}
 
-	@Test
-	public void floater2A1C () throws InterruptedException, IOException {
+
+	public void floaterCkyc () throws InterruptedException, IOException {
+		
+		 floaterCKYC f =PageFactory.initElements(driver, floaterCKYC.class);
+	     Thread.sleep(500);
+		 f.getPanNumberField().sendKeys("GLBPD7383H");
+		 f.getPanSubmitBtn().click();
+		 Thread.sleep(2000);
+		 f.getIdProofType().click();
+		 f.getSelectAadharId().click();
+		 Thread.sleep(500);
+		 f.getAadharNumber().sendKeys("236745678790");
+		 f.getAadharGender().click();
+		 f.getMale().click();
+		 f.getAadharDOB().sendKeys("06/06/2002");
+		 f.getPanSubmitBtn().click();;
+	     until(3);
+
+	     
+
+	}
+	
+	public void selfFlow() throws InterruptedException, IOException {
+		TataAiglogin() ;
+		tataAigQuote();
+		selectTataAigProduct() ;
+		proposerDetailsPage();
+		insuredDetailsPage();
+		insuredPageSubmitButton();
+		nominePageDetails();
+	
+	}
+	
+	public void floaterFlow() throws InterruptedException, IOException {
 		TataAiglogin() ;
 		floaterQuote();
 		selectTataAigProduct() ;
@@ -243,28 +279,12 @@ public class tataAig_testCase extends vizza_insurence.vizzaBase {
 		insured3();
 		insuredPageSubmitButton();
 		 floaterNomineePage();
-		
+		 until(2);
+		 floaterCkyc () ;
+		 until(1);
 		 TestStar ts =new TestStar();
-			tataAigCKYC ck =PageFactory.initElements(driver,tataAigCKYC.class);
-			until(5);
-		//	ck.getDocType().click();
-		//	ck.getSelectPan().click();
-			ck.getPanNumberField().sendKeys("GLKPM3190G");
-			ck.getSubmitBtn().click();
-			until(1);
-			ck.getIdType().click();
-			ck.getAadhar().click();
-			ck.getAadharNumber().sendKeys("236745678790");
-			ck.getGender().click();
-			ck.getMale().click();
-			ck.getDOB().sendKeys("06/06/2002");
-			until(1);
-			
-			ck.getSubmitBtn().click();
-			until(3);
-
-			ts.copy();
-
+		 ts.copy();
+		 
 	}
 
 	public void insured2() {
