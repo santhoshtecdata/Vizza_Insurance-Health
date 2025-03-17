@@ -23,7 +23,14 @@ import POM.Quotepage;
 import POM.login;
 import POMStar.insuredPage;
 import POMStar.starQuotePage;
+import io.restassured.RestAssured;
+import io.restassured.http.Method;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import vizza_insurence.vizzaBase;
+
+
 
 public class TestStar extends vizzaBase {
 	Faker fake=new Faker();
@@ -34,7 +41,7 @@ public class TestStar extends vizzaBase {
 	public String proposerPhoneNumber="9"+fake.number().digits(9);
 	public String proposerEmailID=fake.internet().emailAddress().replace("@.*","@gmail.com" );
 
-	@Test
+
 	public void loginWithValidCredentials(String userName ,String passWord) throws InterruptedException, IOException {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		options.addArguments("--incognito");
@@ -49,11 +56,11 @@ public class TestStar extends vizzaBase {
 		Thread.sleep(3000);
 		boolean loginHomePage=lg.getLogOutBtn().isDisplayed();
 		Thread.sleep(3000);
-		
+
 		//Assert.assertTrue(loginHomePage);
-		
+
 	}
-	@Test
+
 	public void premiumQuotePage() throws InterruptedException, IOException {
 
 		starQuotePage sq=PageFactory.initElements(driver,starQuotePage.class);
@@ -87,7 +94,7 @@ public class TestStar extends vizzaBase {
 		Thread.sleep(1000);
 
 		q.getAssure().click();
-		
+
 		Thread.sleep(2000);
 	}
 
@@ -95,8 +102,12 @@ public class TestStar extends vizzaBase {
 
 		POMStar.quote q= PageFactory.initElements(driver,POMStar.quote.class);
 		q.getFilter().click();Thread.sleep(1000);
+		q.getSelectAllInFilter().click();Thread.sleep(300);
 		q.getStar().click();
 		Thread.sleep(4000);
+		q.getDummy().click();
+		Thread.sleep(1000);
+
 		q.getFloaterPremium().click();
 		Thread.sleep(2000);
 	}
@@ -108,15 +119,15 @@ public class TestStar extends vizzaBase {
 		p.getTitle().click();Thread.sleep(2000);
 		p.getMr().click();Thread.sleep(1000);
 
-		p.getFirstName().sendKeys(name);
+		//	p.getFirstName().sendKeys(name);
 		char initial = name.charAt(2);
 		p.getMitName().sendKeys(Character.toString(initial).toUpperCase());
 		p.getLastName().sendKeys("TEST");
 		p.getDOB().sendKeys("06/06/2002");
 		p.getOccupation().click();
 		p.getBusiness().click();
-		p.getMail().sendKeys(proposerEmailID);
-		p.getPhone().sendKeys("9025939106");
+		//	p.getMail().sendKeys(proposerEmailID);
+		//	p.getPhone().sendKeys("9025939106");
 		scroll(5);
 		p.getAddress1().sendKeys("36");scroll(4);
 		p.getAddress2().sendKeys(fake.address().city());scroll(4);
@@ -132,7 +143,7 @@ public class TestStar extends vizzaBase {
 		p.getStartDate().sendKeys(date("dd/MM/yyyy"));
 		p.getNextBtn().click();
 	}
-	
+
 	public void ckyc() throws InterruptedException, AWTException, IOException {
 
 		POMStar.ckyc c=PageFactory.initElements(driver, POMStar.ckyc.class);
@@ -162,7 +173,7 @@ public class TestStar extends vizzaBase {
 		scroll(8);
 		c.getCkycAddress().click();
 		Thread.sleep(2000);
-         scroll(3);
+		scroll(3);
 		c.getSubmitBtn().click();
 
 	}
@@ -179,7 +190,7 @@ public class TestStar extends vizzaBase {
 		r.keyPress(KeyEvent.VK_ENTER);
 		r.keyRelease(KeyEvent.VK_ENTER);
 	}
-	@Test
+
 	public  void nom() throws InterruptedException, AWTException, IOException {
 
 		insuredPage i= PageFactory.initElements(driver, insuredPage.class);
@@ -245,7 +256,7 @@ public class TestStar extends vizzaBase {
 		q.getStar().click();
 		Thread.sleep(5000);
 		q.getDummy().click();
-		
+
 		scroll(5);
 		q.getCom().click();
 		Thread.sleep(2000);
@@ -265,7 +276,7 @@ public class TestStar extends vizzaBase {
 		}
 	}
 
-	@Test
+
 	public void womenquote() throws InterruptedException, IOException {
 		premiumQuotePage();
 		POMStar.quote q= PageFactory.initElements(driver,POMStar.quote.class);
@@ -286,7 +297,7 @@ public class TestStar extends vizzaBase {
 		q.getWomenCare().click();
 	}
 
-	@Test
+
 	public void assure() throws InterruptedException, IOException, AWTException {
 		TestStar ts = new TestStar();
 		ts.loginWithValidCredentials("9962907312","admin1");
@@ -295,9 +306,9 @@ public class TestStar extends vizzaBase {
 		ts.proposerDetails();
 		ts.ckyc();
 		ts.nom();
-		
+
 	}
-	@Test
+
 	public void com() throws InterruptedException, IOException, AWTException {
 		TestStar ts = new TestStar();
 		loginWithValidCredentials("9962907312","admin1");
@@ -316,11 +327,11 @@ public class TestStar extends vizzaBase {
 		POMStar.proposerDetails p= PageFactory.initElements(driver, POMStar.proposerDetails.class);
 		until(1);
 		Dimension newSize = new Dimension(800, 600);
-        driver.manage().window().setSize(newSize);
+		driver.manage().window().setSize(newSize);
 		p.getLogOut().click();
 		until(1);
 		driver.manage().window().maximize();
-		
+
 	}
 
 	public void copy() {
@@ -330,9 +341,9 @@ public class TestStar extends vizzaBase {
 		i.getCopyLink().click();
 	}
 
-	@Test
+
 	public void womenCarePremiumAmountCompare() throws InterruptedException, IOException {
-		womenquote();
+
 		if(quotePageWomenCarePremiumAmount== womenCareproposalPremium) {
 			Assert.assertTrue(true);
 		}
@@ -349,7 +360,7 @@ public class TestStar extends vizzaBase {
 			e.printStackTrace();
 		}
 		sqp.getPopupNmae().sendKeys(name);
-		sqp.getPopupPhoneNumber().sendKeys(proposerPhoneNumber);
+		sqp.getPopupPhoneNumber().sendKeys("9025939106");
 		sqp.getPopupEmail().sendKeys(proposerEmailID);
 		until(1);scroll(2);
 		sqp.getPopupSubmitBtn().click();
@@ -378,38 +389,38 @@ public class TestStar extends vizzaBase {
 		sq.getProceedBtn().click();
 	}
 
-	@Test
+
 	public void verifyCopyLink() throws AWTException {
 		until(2);
-		  Robot  r1=new Robot(); 
-			r1.keyPress(KeyEvent.VK_CONTROL);
-			r1.keyPress(KeyEvent.VK_T);
-			r1.keyRelease(KeyEvent.VK_CONTROL);
-			r1.keyRelease(KeyEvent.VK_T);
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				
-				e.printStackTrace();
-			}
-			
-			window(1);
-			until(1);
-			r1.keyPress(KeyEvent.VK_CONTROL);
-			r1.keyPress(KeyEvent.VK_V);
-			r1.keyRelease(KeyEvent.VK_CONTROL);
-			r1.keyRelease(KeyEvent.VK_V);
-			
-			r1.keyPress(KeyEvent.VK_ENTER);
-			r1.keyRelease(KeyEvent.VK_ENTER);
-			
-			insuredPage i= PageFactory.initElements(driver, insuredPage.class);
-			until(3);
-			scroll(60);
-			i.getCopyLinkSubmitButton().click();
-			
+		Robot  r1=new Robot(); 
+		r1.keyPress(KeyEvent.VK_CONTROL);
+		r1.keyPress(KeyEvent.VK_T);
+		r1.keyRelease(KeyEvent.VK_CONTROL);
+		r1.keyRelease(KeyEvent.VK_T);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+
+			e.printStackTrace();
+		}
+
+		window(1);
+		until(1);
+		r1.keyPress(KeyEvent.VK_CONTROL);
+		r1.keyPress(KeyEvent.VK_V);
+		r1.keyRelease(KeyEvent.VK_CONTROL);
+		r1.keyRelease(KeyEvent.VK_V);
+
+		r1.keyPress(KeyEvent.VK_ENTER);
+		r1.keyRelease(KeyEvent.VK_ENTER);
+
+		insuredPage i= PageFactory.initElements(driver, insuredPage.class);
+		until(5);
+		scroll(60);
+		i.getCopyLinkSubmitButton().click();
+
 	}
-	@Test
+
 	public void floaterComprehensivePlan() throws InterruptedException, IOException, AWTException {
 		TestStar ts = new TestStar();
 		loginWithValidCredentials("9962907312","admin1");
@@ -434,4 +445,16 @@ public class TestStar extends vizzaBase {
 		ckyc();
 
 	}
+
+	public void response() {
+
+
+		String proposalApiUrl = driver.getCurrentUrl(); 
+        Response response = RestAssured.get(proposalApiUrl);
+        
+        System.out.println("Status Code: " + response.getStatusCode());
+		System.out.println("Response Body: " + response.getBody().asPrettyString());
+	}
+
+
 }

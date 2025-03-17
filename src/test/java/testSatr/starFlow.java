@@ -17,9 +17,13 @@ public class starFlow extends vizzaBase{
 		test.pass("login successfully");
 		TestStar ts = new TestStar();
 		ts.assure() ;
+		
 		test.pass("Assure plan proposal is created");
 		until(30);
+		ts.response();
 		ts.copy();
+		until(3);
+		
 		driver.get("https://vizzainsurance.com/home");
 		until(3);
 		ts.logout();until(2);
@@ -30,6 +34,8 @@ public class starFlow extends vizzaBase{
 		ts.copy();
 		until(2);
 		ts.verifyCopyLink();
+		until(3);
+		ts.response();
 		test.pass("star produts verifiyed");
 		
 			}

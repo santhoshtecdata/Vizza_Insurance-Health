@@ -2,34 +2,34 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-15T14:53:53 IST" name="Default suite" finished-at="2025-03-15T14:57:55 IST" duration-ms="241795">
+  <suite started-at="2025-03-17T17:20:16 IST" name="Default suite" finished-at="2025-03-17T17:24:23 IST" duration-ms="247242">
     <groups>
     </groups>
-    <test started-at="2025-03-15T14:53:53 IST" name="Default test" finished-at="2025-03-15T14:57:55 IST" duration-ms="241795">
+    <test started-at="2025-03-17T17:20:16 IST" name="Default test" finished-at="2025-03-17T17:24:23 IST" duration-ms="247242">
       <class name="testSatr.starFlow">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testSatr.starFlow@34bde49d]" started-at="2025-03-15T14:53:53 IST" name="beforeMethod" finished-at="2025-03-15T14:54:01 IST" duration-ms="7807" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testSatr.starFlow@5c86a017]" started-at="2025-03-17T17:20:16 IST" name="beforeMethod" finished-at="2025-03-17T17:20:25 IST" duration-ms="8474" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="makePolicy()[pri:0, instance:testSatr.starFlow@34bde49d]" started-at="2025-03-15T14:54:01 IST" name="makePolicy" finished-at="2025-03-15T14:57:54 IST" duration-ms="233162" status="FAIL">
+        <test-method signature="makePolicy()[pri:0, instance:testSatr.starFlow@5c86a017]" started-at="2025-03-17T17:20:25 IST" name="makePolicy" finished-at="2025-03-17T17:24:23 IST" duration-ms="238063" status="FAIL">
           <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
               <![CDATA[element not interactable
   (Session info: chrome=134.0.6998.89)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-CL6B6RR', ip: '192.168.0.151', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+System info: host: 'DESKTOP-CL6B6RR', ip: '192.168.0.155', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\TECDAT~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53235}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ed7a1d84f29eec3bd69f4dd4faf16d29]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\TECDAT~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58634}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 75c9b9cbc8ded3609d7c2f8fdfb8b0ea]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
   (Session info: chrome=134.0.6998.89)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-CL6B6RR', ip: '192.168.0.151', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+System info: host: 'DESKTOP-CL6B6RR', ip: '192.168.0.155', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\TECDAT~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53235}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ed7a1d84f29eec3bd69f4dd4faf16d29
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\TECDAT~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58634}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 75c9b9cbc8ded3609d7c2f8fdfb8b0ea
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -45,8 +45,8 @@ at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethod
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
-at testSatr.TestStar.verifyCopyLink(TestStar.java:409)
-at testSatr.starFlow.makePolicy(starFlow.java:32)
+at testSatr.TestStar.verifyCopyLink(TestStar.java:420)
+at testSatr.starFlow.makePolicy(starFlow.java:36)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -79,7 +79,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- makePolicy -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testSatr.starFlow@34bde49d]" started-at="2025-03-15T14:57:54 IST" name="afterMethod" finished-at="2025-03-15T14:57:55 IST" duration-ms="677" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testSatr.starFlow@5c86a017]" started-at="2025-03-17T17:24:23 IST" name="afterMethod" finished-at="2025-03-17T17:24:23 IST" duration-ms="566" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
