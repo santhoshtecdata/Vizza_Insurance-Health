@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Star " parallel="methods" thread-count="1" >
+<listeners>
+<listener class-name="testSatr.triggger"></listener>
+ <listener class-name="vizza_insurence.transForm"/>
+</listeners>
+    <test name="Star product Test" thread-count="1">
+        <classes>
+       
+           <class name="testSatr.starFlow"> </class>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
