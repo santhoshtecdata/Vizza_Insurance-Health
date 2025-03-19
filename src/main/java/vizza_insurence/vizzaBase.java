@@ -46,6 +46,11 @@ import POM_motor.CKYC;
 import POM_motor.logInMotor;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+import net.lightbody.bmp.BrowserMobProxy;
+import net.lightbody.bmp.BrowserMobProxyServer;
+import net.lightbody.bmp.client.ClientUtil;
+import org.openqa.selenium.Proxy;
+
 
 
 
@@ -70,6 +75,7 @@ public class vizzaBase {
 	public ExtentSparkReporter esr;
 	public ExtentTest test;
 	public static Robot r1;
+	public BrowserMobProxy proxy;
 	
 	public String getProperty(String name) throws IOException {
 		this.fis = new FileInputStream(this.propath);
@@ -82,6 +88,10 @@ public class vizzaBase {
 	public void beforeMethod() throws IOException, AWTException {
 		String browser = this.getProperty(this.browser);
 	
+	
+	      
+	     
+	     
 		this.options.addArguments("--disable-notifications");
 		options.addArguments("--incognito");
 		/*
@@ -109,6 +119,8 @@ public class vizzaBase {
 				// attach the report and file
 				report.attachReporter(esr);
 				
+				
+				
 			
 	}
 
@@ -116,8 +128,9 @@ public class vizzaBase {
 	public void afterMethod() {
 		
 		
+		
 		report.flush();
-	//	driver.quit();
+		driver.quit();
 	}
 
 	public void takeScreenshot(String name) throws IOException {
@@ -203,7 +216,34 @@ public class vizzaBase {
 		}	    	  
 	}
 
+public static void payload() {
+	   BrowserMobProxy proxy = new BrowserMobProxyServer();
+       proxy.start(0);
 
+       // Configure Selenium proxy
+       Proxy seleniumProxy = ClientUtil.createSeleniumProxy(proxy);
+       ChromeOptions options = new ChromeOptions();
+       options.setProxy(seleniumProxy);
+
+       // Start ChromeDriver
+       System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+       ChromeDriver driver = new ChromeDriver(options);
+
+       // Start capturing traffic
+       proxy.newHar("CapturePayload");
+
+       // Open a webpage
+       driver.get("https://example.com");
+
+       // Print captured requests
+       proxy.getHar().getLog().getEntries().forEach(entry -> {
+           System.out.println("Request: " + entry.getRequest().getUrl());
+           System.out.println("Payload: " + entry.getRequest().getPostData());
+       });
+
+      
+       proxy.stop();
+}
 
 
 }

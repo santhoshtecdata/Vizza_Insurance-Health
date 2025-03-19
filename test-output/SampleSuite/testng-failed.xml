@@ -7,33 +7,24 @@
   </listeners>
   <test thread-count="1" parallel="methods" name="SampleTest(failed)">
     <classes>
-      <class name="TATA_AIG.nomineePageTestCase">
-        <methods>
-          <include name="verifyTheNomineeNameFieldNotAcceptNumbers"/>
-          <include name="verifyIfProvideMinorAgeDOBAskingTheGuardianDetails"/>
-          <include name="verifyTheNomineeContribution"/>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="verifyTheNomineeDobFieldNotAcceptTheCurrentDate"/>
-        </methods>
-      </class> <!-- TATA_AIG.nomineePageTestCase -->
       <class name="TATA_AIG.proposerPageTestCase">
         <methods>
-          <include name="verifyLastNameRejectsHTMLTags"/>
-          <include name="verifyFirstNameRejectsHTMLTags"/>
-          <include name="verifyPinCodeFiledNotAcceptTheChracters"/>
-          <include name="verifyPinCodeFiledNotAcceptTheSpecialChracters"/>
+          <include name="verifyTryToMoveNextPageWhenNotProvideLastName"/>
           <include name="afterMethod"/>
-          <include name="vreifyProposerLastNameFieldAcceptTheAlphabetCharacters"/>
-          <include name="verifyFirstNameMinimumLength"/>
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- TATA_AIG.proposerPageTestCase -->
+      <class name="TATA_AIG.nomineePageTestCase">
+        <methods>
+          <include name="verifyTheNomineeNameFieldNotAcceptNumbers"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- TATA_AIG.nomineePageTestCase -->
       <class name="TATA_AIG.insuredPageTestCase">
         <methods>
           <include name="verifyTheWeughtFieldAcceptTheSpecialCharctersOrNot"/>
           <include name="afterMethod"/>
-          <include name="verifyTheFunctionalityOfNextButton"/>
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- TATA_AIG.insuredPageTestCase -->

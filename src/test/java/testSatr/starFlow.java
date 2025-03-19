@@ -10,20 +10,18 @@ import vizza_insurence.vizzaBase;
 
 
 public class starFlow extends vizzaBase{
+	
 	@Test
 	public void makePolicy() throws InterruptedException, IOException, AWTException {
 		test = report.createTest("verify proposal is created or not");
 		test.pass("chrome browser opened");
 		test.pass("login successfully");
 		TestStar ts = new TestStar();
-		ts.assure() ;
-		
+		ts.assure();
 		test.pass("Assure plan proposal is created");
 		until(30);
-		ts.response();
-		ts.copy();
+        ts.copy();
 		until(3);
-		
 		driver.get("https://vizzainsurance.com/home");
 		until(3);
 		ts.logout();until(2);
@@ -35,7 +33,9 @@ public class starFlow extends vizzaBase{
 		until(2);
 		ts.verifyCopyLink();
 		until(3);
-		ts.response();
+		ts.logout();until(2);
+		driver.get("https://vizzainsurance.com/home");
+		ts.floaterAssurePlan2A1C();
 		test.pass("star produts verifiyed");
 		
 			}

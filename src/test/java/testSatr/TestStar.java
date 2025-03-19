@@ -21,6 +21,7 @@ import com.github.javafaker.Faker;
 
 import POM.Quotepage;
 import POM.login;
+import POMStar.floaterInsuredPageElements;
 import POMStar.insuredPage;
 import POMStar.starQuotePage;
 import io.restassured.RestAssured;
@@ -40,7 +41,8 @@ public class TestStar extends vizzaBase {
 	public int womenCareproposalPremium=0;
 	public String proposerPhoneNumber="9"+fake.number().digits(9);
 	public String proposerEmailID=fake.internet().emailAddress().replace("@.*","@gmail.com" );
-
+   
+	      
 
 	public void loginWithValidCredentials(String userName ,String passWord) throws InterruptedException, IOException {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -67,7 +69,8 @@ public class TestStar extends vizzaBase {
 		sq.getOnlineInsurance().click();
 		sq.getHealthInsurance().click();
 
-		Thread.sleep(1000);quotePagePopupDetails();
+		Thread.sleep(1000);
+		quotePagePopupDetails();
 		driver.findElement(By.tagName("html")).click();
 		sq.getAgeFiledforSelf().sendKeys("06/06/2002");Thread.sleep(1000);
 		for(int n=0;n<=8;n++) {
@@ -221,11 +224,49 @@ public class TestStar extends vizzaBase {
 		scroll(8);
 	}
 	public void insured2() {
+		scroll(5);
+		floaterInsuredPageElements fi =PageFactory.initElements(driver, floaterInsuredPageElements.class);
+		fi.getInsured2Container().click();
+		until(1);
+		fi.getSpouseName().sendKeys(fake.name().firstName());
+		fi.getSpouseDOB().sendKeys("06/06/2003");
+		fi.getSpouseGender().click();
+		fi.getSpouseFemale().click();
+		fi.getSpouseHeight().sendKeys("175");
+		fi.getSpouseWeight().sendKeys("73");
+		fi.getSpouseOccupation().click();
+		fi.getSpouseWork().click();
+		until(1);
+		fi.getSpouseRelation().click();
+        fi.getSpouseRel().click();	
 
 	}
 	public void insured3() {
-
+		scroll(5);
+		floaterInsuredPageElements fi =PageFactory.initElements(driver, floaterInsuredPageElements.class);
+		fi.getInsured3Container().click();
+		until(1);	
+		fi.getChildName().sendKeys(fake.name().firstName());
+		fi.getChildDOB().sendKeys("06/06/2022");
+		fi.getChildGender().click();
+		fi.getChildMale().click();
+		fi.getChildOccupation().click();
+		scroll(6);
+		fi.getChildWork().click();
+		until(1);
+		fi.getChildRelation().click();
+        fi.getRelChild().click();	
+		
 	}
+	
+	public void floaterNextButtonForInsuredPage() {
+		scroll(5);
+		floaterInsuredPageElements fi =PageFactory.initElements(driver, floaterInsuredPageElements.class);
+		
+		until(1);	
+		fi.getFloaterNxtBtn().click();
+	}
+	
 	public  void comnom() throws InterruptedException, AWTException, IOException {
 
 		insuredPage i= PageFactory.initElements(driver, insuredPage.class);
@@ -297,7 +338,7 @@ public class TestStar extends vizzaBase {
 		q.getWomenCare().click();
 	}
 
-
+@Test
 	public void assure() throws InterruptedException, IOException, AWTException {
 		TestStar ts = new TestStar();
 		ts.loginWithValidCredentials("9962907312","admin1");
@@ -416,7 +457,12 @@ public class TestStar extends vizzaBase {
 
 		insuredPage i= PageFactory.initElements(driver, insuredPage.class);
 		until(5);
+		
 		scroll(60);
+		if(i.getCopyLinkSubmitButton().isDisplayed()==false) {
+			scroll(60);
+		}
+		
 		i.getCopyLinkSubmitButton().click();
 
 	}
@@ -443,17 +489,28 @@ public class TestStar extends vizzaBase {
 		floaterAssureQuote() ;
 		proposerDetails();
 		ckyc();
+		insuredPage i= PageFactory.initElements(driver, insuredPage.class);
+		Thread.sleep(2000);
+		driver.findElement(By.tagName("html")).click();Thread.sleep(1000);
+		i.getSameUs().click();
+		i.getHeight().sendKeys("165");
+		i.getWeight().sendKeys("65");
+	
+		insured2();
+		insured3();
+		floaterNextButtonForInsuredPage();
+		
+		Thread.sleep(3000);
+		i.getNomname().sendKeys("user");
+		i.getAge().sendKeys("27");
+		i.getRelaton().click();
+		i.getBro().click();
+		i.getPer().sendKeys("100");
+		Thread.sleep(1000);
+		i.getNomSubmitBtn().click();
+		until(4);
+		verifyCopyLink();
 
-	}
-
-	public void response() {
-
-
-		String proposalApiUrl = driver.getCurrentUrl(); 
-        Response response = RestAssured.get(proposalApiUrl);
-        
-        System.out.println("Status Code: " + response.getStatusCode());
-		System.out.println("Response Body: " + response.getBody().asPrettyString());
 	}
 
 

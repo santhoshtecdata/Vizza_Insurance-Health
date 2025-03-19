@@ -26,7 +26,7 @@ public class starQuotePage  {
 	@FindBy (xpath ="//div[@class='col-md-8']")
 	WebElement verifiedPremiumQuotePage;
 	
-	@FindBy (xpath="(//input[@formcontrolname='name'])[1]")
+	@FindBy (xpath="(//input[@data-placeholder='Name'])[1]")
 	WebElement popupNmae;
 	
 	@FindBy (xpath="(//input[@formcontrolname='phonenumber'])[1]")

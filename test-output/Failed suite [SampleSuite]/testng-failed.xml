@@ -9,9 +9,9 @@
     <classes>
       <class name="TATA_AIG.nomineePageTestCase">
         <methods>
+          <include name="verifyTheNomineeNameFieldNotAcceptNumbers"/>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
-          <include name="verifyTheNomineeDobFieldNotAcceptTheCurrentDate"/>
         </methods>
       </class> <!-- TATA_AIG.nomineePageTestCase -->
     </classes>

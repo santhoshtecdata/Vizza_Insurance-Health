@@ -150,6 +150,12 @@
     <version>5.5.0</version>
     
 </dependency>
+<dependency>
+    <groupId>net.lightbody.bmp</groupId>
+    <artifactId>browsermob-core</artifactId>
+    <version>2.1.5</version>
+</dependency>
+
 	
   </dependencies>
   
