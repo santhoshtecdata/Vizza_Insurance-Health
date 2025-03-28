@@ -1005,7 +1005,7 @@ public void verifyMobileNumberFieldLimit() throws InterruptedException, IOExcept
 	p.getCity().click();try {
 		Thread.sleep(1000);
 	} catch (InterruptedException e) {
-		// TODO Auto-generated catch block
+		
 		e.printStackTrace();
 	}
 	p.getCity().click();
@@ -1013,7 +1013,7 @@ public void verifyMobileNumberFieldLimit() throws InterruptedException, IOExcept
 	p.getArea().click();try {
 		Thread.sleep(1000);
 	} catch (InterruptedException e) {
-		// TODO Auto-generated catch block
+		
 		e.printStackTrace();
 	}
 	p.getArea().click();

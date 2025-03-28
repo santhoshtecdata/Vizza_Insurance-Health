@@ -38,7 +38,7 @@ public class insuredPage {
 	@FindBy(xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-star-health-proposal/section[1]/div/div/div[1]/mat-horizontal-stepper/div[2]/div[2]/mat-accordion/div/mat-expansion-panel/div/div/div/div[2]/div[10]/mat-radio-group/mat-radio-button[1]/label/div[2]")
 	WebElement personalAccitent;
 	
-	@FindBy (xpath="//span[text()='Copy Link']")
+	@FindBy (xpath="//span[text()='Payment Link']")
 	WebElement copylink;
 	
 	@FindBy (xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-star-health-proposal/section[1]/div/div/div[1]/mat-horizontal-stepper/div[2]/div[2]/mat-accordion/div[2]/mat-expansion-panel/mat-expansion-panel-header/span[1]/mat-panel-title")

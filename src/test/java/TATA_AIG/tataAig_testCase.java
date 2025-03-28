@@ -255,7 +255,7 @@ public class tataAig_testCase extends vizza_insurence.vizzaBase {
 	     
 
 	}
-	
+	@Test
 	public void selfFlow() throws InterruptedException, IOException {
 		TataAiglogin() ;
 		tataAigQuote();
@@ -264,9 +264,9 @@ public class tataAig_testCase extends vizza_insurence.vizzaBase {
 		insuredDetailsPage();
 		insuredPageSubmitButton();
 		nominePageDetails();
-	
+	    until(200);
 	}
-	
+	@Test
 	public void floaterFlow() throws InterruptedException, IOException {
 		TataAiglogin() ;
 		floaterQuote();
@@ -284,6 +284,7 @@ public class tataAig_testCase extends vizza_insurence.vizzaBase {
 		 until(1);
 		 TestStar ts =new TestStar();
 		 ts.copy();
+		 until(2);
 		 
 	}
 

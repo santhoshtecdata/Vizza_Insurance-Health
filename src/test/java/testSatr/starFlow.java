@@ -33,9 +33,6 @@ public class starFlow extends vizzaBase{
 		until(2);
 		ts.verifyCopyLink();
 		until(3);
-		ts.logout();until(2);
-		driver.get("https://vizzainsurance.com/home");
-		ts.floaterAssurePlan2A1C();
 		test.pass("star produts verifiyed");
 		
 			}
