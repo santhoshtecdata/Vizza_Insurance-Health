@@ -28,6 +28,9 @@ jobs:
           key: maven-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             maven-${{ runner.os }}
-
+            
+      - name: Run Specific TestNG Suite (E2E)
+        run: mvn test -DsuiteXmlFile=E2ETestingOfStar.xml
+        
       - name: Build & Run TestNG Tests
         run: mvn clean test
