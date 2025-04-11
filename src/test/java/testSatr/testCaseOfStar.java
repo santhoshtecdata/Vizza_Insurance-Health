@@ -84,7 +84,7 @@ public class testCaseOfStar extends starFlow {
 	@Test
 	public void verifyProposerFirstNamefiledAcceptTheSpecialCharcterOrNot() throws InterruptedException, IOException {
 		try {
-			ts.loginWithValidCredentials("9962907312","admin1");
+			ts.loginWithValidCredentials("sakthikrishnan106@gmail.com","Sakthi@1602");
 		} catch (InterruptedException | IOException e) {
 
 		}
@@ -103,7 +103,7 @@ public class testCaseOfStar extends starFlow {
 	@Test
 public void flow() {
 	try {
-		ts.loginWithValidCredentials("9962907312","admin1");
+		ts.loginWithValidCredentials("sakthikrishnan106@gmail.com","Sakthi@1602");
 		ts.premiumQuotePage() ;
 		ts. quote();
 	} catch (InterruptedException | IOException e) {
@@ -121,7 +121,7 @@ public void flow() {
 	@Test
 	public void verifyProposerFirstNamefiledAcceptTheValidInput() throws InterruptedException, IOException {
 		try {
-			ts.loginWithValidCredentials("9962907312","admin1");
+			ts.loginWithValidCredentials("sakthikrishnan106@gmail.com","Sakthi@1602");
 		} catch (InterruptedException | IOException e) {
 
 		}
@@ -140,7 +140,7 @@ public void flow() {
 	@Test
 	public void verifyProposerLastNamefiledAcceptTheValidInput() throws InterruptedException, IOException {
 		try {
-			ts.loginWithValidCredentials("9962907312","admin1");
+			ts.loginWithValidCredentials("sakthikrishnan106@gmail.com","Sakthi@1602");
 		} catch (InterruptedException | IOException e) {
 
 		}
@@ -159,7 +159,7 @@ public void flow() {
 	@Test
 	public void verifyTheDOBAcceptTheFutureDates() throws InterruptedException, IOException {
 
-		ts.loginWithValidCredentials("9962907312","admin1");
+		ts.loginWithValidCredentials("sakthikrishnan106@gmail.com","Sakthi@1602");
 
 
 		ts.premiumQuotePage() ;
@@ -177,7 +177,7 @@ public void flow() {
 	@Test
 	public void verifyTheDOBAcceptTheCurrentDates() throws InterruptedException, IOException {
 
-		ts.loginWithValidCredentials("9962907312","admin1");
+		ts.loginWithValidCredentials("sakthikrishnan106@gmail.com","Sakthi@1602");
 
 
 		ts.premiumQuotePage() ;
@@ -192,7 +192,7 @@ public void flow() {
 	}
 	@Test
 public void verifyMobileNumberFieldAcceptTheCharacters() throws InterruptedException, IOException {
-		ts.loginWithValidCredentials("9962907312","admin1");
+		ts.loginWithValidCredentials("sakthikrishnan106@gmail.com","Sakthi@1602");
         ts.premiumQuotePage() ;
 		ts. quote();
 		until(2);
@@ -205,7 +205,7 @@ public void verifyMobileNumberFieldAcceptTheCharacters() throws InterruptedExcep
 }
 	@Test
 public void verifyMobileNumberFieldLimit() throws InterruptedException, IOException {
-	ts.loginWithValidCredentials("9962907312","admin1");
+	ts.loginWithValidCredentials("sakthikrishnan106@gmail.com","Sakthi@1602");
     ts.premiumQuotePage() ;
 	ts. quote();
 	until(2);
@@ -219,7 +219,7 @@ public void verifyMobileNumberFieldLimit() throws InterruptedException, IOExcept
 	@Test
 	public void verifyAllOccupationIsClickable() throws InterruptedException, IOException {
 		
-				ts.loginWithValidCredentials("9962907312","admin1");
+				ts.loginWithValidCredentials("sakthikrishnan106@gmail.com","Sakthi@1602");
 			    ts.premiumQuotePage() ;
 				ts. quote();
 				until(2);

@@ -93,11 +93,13 @@ public class TestStar extends vizzaBase {
 		q.getSelectAllInFilter().click();Thread.sleep(300);
 		q.getStar().click();
 		Thread.sleep(3000);
+		
 		q.getDummy().click();
 		Thread.sleep(1000);
 
 		q.getAssure().click();
-
+		Thread.sleep(1000);
+        q.getPosOk().click();
 		Thread.sleep(2000);
 	}
 
@@ -113,6 +115,10 @@ public class TestStar extends vizzaBase {
 
 		q.getFloaterPremium().click();
 		Thread.sleep(2000);
+		
+        q.getPosOk().click();
+        Thread.sleep(1000);
+
 	}
 
 	public void proposerDetails() throws InterruptedException, IOException {
@@ -297,10 +303,13 @@ public class TestStar extends vizzaBase {
 		q.getStar().click();
 		Thread.sleep(5000);
 		q.getDummy().click();
+		Thread.sleep(1000);
+		
 
 		scroll(5);
 		q.getCom().click();
 		Thread.sleep(2000);
+		  q.getPosOk().click();
 		String comprehensive =q.getNewIndia().getText();
 		System.out.println(comprehensive);
 		try {
@@ -330,7 +339,8 @@ public class TestStar extends vizzaBase {
 		q.getStar().click();Thread.sleep(4000);
 		driver.findElement(By.tagName("html")).click();Thread.sleep(3000);
 		scroll(25);
-
+		Thread.sleep(5000);
+		 q.getPosOk().click();
 		womenCarePremiumAmount=q.getWomenCareAmount().getText();
 		quotePageWomenCarePremiumAmount=Integer.parseInt(womenCarePremiumAmount.substring(2));
 		pri(womenCarePremiumAmount) ;
@@ -341,18 +351,18 @@ public class TestStar extends vizzaBase {
 @Test
 	public void assure() throws InterruptedException, IOException, AWTException {
 		TestStar ts = new TestStar();
-		ts.loginWithValidCredentials("9962907312","admin1");
+		ts.loginWithValidCredentials("sakthikrishnan106@gmail.com","Sakthi@1602");
 		ts.premiumQuotePage() ;
 		ts. quote();
 		ts.proposerDetails();
 		ts.ckyc();
 		ts.nom();
-
+		
 	}
 
 	public void com() throws InterruptedException, IOException, AWTException {
 		TestStar ts = new TestStar();
-		loginWithValidCredentials("9962907312","admin1");
+		loginWithValidCredentials("sakthikrishnan106@gmail.com","Sakthi@1602");
 
 		ts.premiumQuotePage() ;
 
@@ -469,7 +479,7 @@ public class TestStar extends vizzaBase {
 
 	public void floaterComprehensivePlan() throws InterruptedException, IOException, AWTException {
 		TestStar ts = new TestStar();
-		loginWithValidCredentials("9962907312","admin1");
+		loginWithValidCredentials("sakthikrishnan106@gmail.com","Sakthi@1602");
 
 		floaterQuote();
 		until(2);
@@ -483,7 +493,7 @@ public class TestStar extends vizzaBase {
 	@Test
 	public void floaterAssurePlan2A1C() throws InterruptedException, IOException, AWTException {
 		TestStar ts = new TestStar();
-		ts.loginWithValidCredentials("9962907312","admin1");
+		ts.loginWithValidCredentials("sakthikrishnan106@gmail.com","Sakthi@1602");
 		floaterQuote();until(3);
 
 		floaterAssureQuote() ;

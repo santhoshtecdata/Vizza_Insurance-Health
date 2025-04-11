@@ -10,6 +10,9 @@ public class quote {
 	@FindBy(xpath="(//mat-select-trigger[text()=' All (+ 4 others) '])[1]")
 	WebElement filter;
 
+	@FindBy(xpath="//span[text()='Ok']")
+	WebElement posOk;
+	
 	@FindBy(xpath="(//span[text()='5 Lac'])[1]")
 	WebElement sum;
 
@@ -53,6 +56,60 @@ public class quote {
 	WebElement f;
 	
 	
+	public WebElement getPosOk() {
+		return posOk;
+	}
+
+
+
+	public void setPosOk(WebElement posOk) {
+		this.posOk = posOk;
+	}
+
+
+
+	public void setFilterArrow(WebElement filterArrow) {
+		this.filterArrow = filterArrow;
+	}
+
+
+
+	public void setNewIndia(WebElement newIndia) {
+		this.newIndia = newIndia;
+	}
+
+
+
+	public void setComretry(WebElement comretry) {
+		this.comretry = comretry;
+	}
+
+
+
+	public void setFloaterPremium(WebElement floaterPremium) {
+		this.floaterPremium = floaterPremium;
+	}
+
+
+
+	public void setSelectAllInFilter(WebElement selectAllInFilter) {
+		this.selectAllInFilter = selectAllInFilter;
+	}
+
+
+
+	public void setDummy(WebElement dummy) {
+		this.dummy = dummy;
+	}
+
+
+
+	public void setF(WebElement f) {
+		this.f = f;
+	}
+
+
+
 	public WebElement getSelectAllInFilter() {
 		return selectAllInFilter;
 	}

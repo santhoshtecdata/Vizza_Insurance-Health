@@ -12,6 +12,7 @@ import vizza_insurence.vizzaBase;
 public class starFlow extends vizzaBase{
 	
 	@Test
+	
 	public void makePolicy() throws InterruptedException, IOException, AWTException {
 		test = report.createTest("verify proposal is created or not");
 		test.pass("chrome browser opened");

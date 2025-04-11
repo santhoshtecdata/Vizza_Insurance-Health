@@ -7,13 +7,13 @@ public class login {
 	@FindBy(xpath="//div[@class='dropdown h-login']")
 	WebElement loginBtn;
 	
-	@FindBy(xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/mat-toolbar/div/div[2]/div/div/a[1]/i")
+	@FindBy(xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/mat-toolbar/div/div[2]/div/div/a[7]")
 	WebElement posLink;
 	
-	@FindBy(xpath="//input[@data-placeholder='Mobile number']")
+	@FindBy(xpath="(//input[@data-placeholder='User Name'])[1]")
 	WebElement mobileNumper;
 	
-	@FindBy(xpath="//input[@data-placeholder='Password']")
+	@FindBy(xpath="(//input[@data-placeholder='Password'])[1]")
 	WebElement password ;
 	
 	@FindBy(xpath="//button[@type='submit']")
