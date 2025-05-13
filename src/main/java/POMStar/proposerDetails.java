@@ -63,7 +63,7 @@ public class proposerDetails {
 	WebElement nextBtn;
 	
 	
-	@FindBy(xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-star-health-proposal/section[1]/div/div/div[1]/mat-horizontal-stepper/div[2]/div[1]/form/mat-accordion/mat-expansion-panel/div/div/div/div[2]/div[2]/div/div[1]/div/mat-checkbox/label/div")
+	@FindBy(xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-star-health-proposal/section[1]/div/div/div[1]/mat-horizontal-stepper/div/div[2]/div[1]/form/mat-accordion/mat-expansion-panel/div/div/div/div[2]/div[2]/div/div[1]/div/mat-checkbox/label/span[1]")
 	WebElement sameusAddress;
 	
 	@FindBy(xpath="//mat-icon[@mattooltip='Logout']")

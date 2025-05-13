@@ -14,7 +14,7 @@ public class starQuotePage  {
 	@FindBy (xpath ="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-health-insurance/div[1]/div/div[2]/div/div/mat-tab-group/div/mat-tab-body[1]/div/div[1]/div[1]/div[1]/div[1]/mat-checkbox/label/div")
 	WebElement selfCheckBox;
 	
-	@FindBy (xpath ="//input[@id='mat-input-16']")
+	@FindBy (xpath ="//input[@id='mat-input-18']")
 	WebElement ageFiledforSelf;
 	
 	@FindBy (xpath ="//input[@name='healthPincode']")
@@ -26,7 +26,7 @@ public class starQuotePage  {
 	@FindBy (xpath ="//div[@class='col-md-8']")
 	WebElement verifiedPremiumQuotePage;
 	
-	@FindBy (xpath="(//input[@data-placeholder='Name'])[1]")
+	@FindBy (xpath="(//input[@data-placeholder='First Name'])[1]")
 	WebElement popupNmae;
 	
 	@FindBy (xpath="(//input[@formcontrolname='phonenumber'])[1]")
@@ -38,6 +38,14 @@ public class starQuotePage  {
 	@FindBy (xpath="(//span[text()='Next'])[1]")
 	WebElement popupSubmitBtn;
 	
+	@FindBy(xpath="(//input[@data-placeholder='Last Name'])[1]")
+	WebElement lastName;
+	
+	
+	public WebElement getLastName() {
+		return lastName;
+	}
+
 	public WebElement getPopupSubmitBtn() {
 		return popupSubmitBtn;
 	}

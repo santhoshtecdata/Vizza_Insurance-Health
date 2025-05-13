@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class insuredPage {
 	
-	@FindBy(xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-star-health-proposal/section[1]/div/div/div[1]/mat-horizontal-stepper/div[2]/div[2]/mat-accordion/div/mat-expansion-panel/div/div/div/div[1]/mat-checkbox/label/div")
+	@FindBy(xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-star-health-proposal/section[1]/div/div/div[1]/mat-horizontal-stepper/div/div[2]/div[2]/mat-accordion/div/mat-expansion-panel/div/div/div/div[1]/mat-checkbox/label/span[2]/strong")
 	WebElement sameUs;
 	
 	@FindBy(xpath="(//input[@data-placeholder='Height(cms)'])[1]")
@@ -17,25 +17,25 @@ public class insuredPage {
 	@FindBy(xpath="(//button[@type='submit'])[2]")
 	WebElement inssubmitBtn;
 	
-	@FindBy(xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-star-health-proposal/section[1]/div/div/div[1]/mat-horizontal-stepper/div[2]/div[3]/mat-accordion/mat-expansion-panel/div/div/div/div/div[1]/mat-card/div/div[1]/mat-form-field/div/div[1]/div/input")
+	@FindBy(xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-star-health-proposal/section[1]/div/div/div[1]/mat-horizontal-stepper/div/div[2]/div[3]/mat-accordion/mat-expansion-panel/div/div/div/div/div[1]/mat-card/div/div[1]/mat-form-field/div/div[1]/div/input")
 	WebElement nomname;
 	
-	@FindBy(xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-star-health-proposal/section[1]/div/div/div[1]/mat-horizontal-stepper/div[2]/div[3]/mat-accordion/mat-expansion-panel/div/div/div/div/div[1]/mat-card/div/div[2]/mat-form-field/div/div[1]/div/input")
+	@FindBy(xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-star-health-proposal/section[1]/div/div/div[1]/mat-horizontal-stepper/div/div[2]/div[3]/mat-accordion/mat-expansion-panel/div/div/div/div/div[1]/mat-card/div/div[2]/mat-form-field/div/div[1]/div/input")
 	WebElement age;
 	
-	@FindBy(xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-star-health-proposal/section[1]/div/div/div[1]/mat-horizontal-stepper/div[2]/div[3]/mat-accordion/mat-expansion-panel/div/div/div/div/div[1]/mat-card/div/div[4]/mat-form-field/div/div[1]/div/input")
+	@FindBy(xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-star-health-proposal/section[1]/div/div/div[1]/mat-horizontal-stepper/div/div[2]/div[3]/mat-accordion/mat-expansion-panel/div/div/div/div/div[1]/mat-card/div/div[4]/mat-form-field/div/div[1]/div/input")
 	WebElement per;
 	
 	@FindBy(xpath="(//button[@type='submit'])[3]")
 	WebElement nomSubmitBtn;
 	
-	@FindBy(xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-star-health-proposal/section[1]/div/div/div[1]/mat-horizontal-stepper/div[2]/div[3]/mat-accordion/mat-expansion-panel/div/div/div/div/div[1]/mat-card/div/div[3]/mat-form-field/div/div[1]/div/mat-select/div/div[1]/span")
+	@FindBy(xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-star-health-proposal/section[1]/div/div/div[1]/mat-horizontal-stepper/div/div[2]/div[3]/mat-accordion/mat-expansion-panel/div/div/div/div/div[1]/mat-card/div/div[3]/mat-form-field/div/div[1]/div/mat-select")
 	WebElement relaton;
 	
 	@FindBy(xpath="//span[text()=' Brother ']")
 	WebElement bro;
 
-	@FindBy(xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-star-health-proposal/section[1]/div/div/div[1]/mat-horizontal-stepper/div[2]/div[2]/mat-accordion/div/mat-expansion-panel/div/div/div/div[2]/div[10]/mat-radio-group/mat-radio-button[1]/label/div[2]")
+	@FindBy(xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-star-health-proposal/section[1]/div/div/div[1]/mat-horizontal-stepper/div/div[2]/div[2]/mat-accordion/div/mat-expansion-panel/div/div/div/div[2]/div[10]/mat-radio-group/mat-radio-button[1]/label/span[2]")
 	WebElement personalAccitent;
 	
 	@FindBy (xpath="//span[text()='Review Link']")

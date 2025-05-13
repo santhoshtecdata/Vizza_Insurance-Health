@@ -11,6 +11,8 @@ import vizza_insurence.vizzaBase;
 
 public class starFlow extends vizzaBase{
 	
+	
+	
 	@Test
 	
 	public void makePolicy() throws InterruptedException, IOException, AWTException {
@@ -38,7 +40,9 @@ public class starFlow extends vizzaBase{
 		
 			}
 	
-	/*public static void report() {
+	/*
+	
+	public static void report() {
 		
 		//create a empty html file
 				ExtentSparkReporter esr = new ExtentSparkReporter("./testReport.html");
@@ -54,8 +58,9 @@ public class starFlow extends vizzaBase{
 		report.flush();
 		pri("done");
 		
-	}*/
-
+	}
+*/
+	
 	
 }
 

@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.By.ByTagName;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
@@ -128,7 +129,7 @@ public class TestStar extends vizzaBase {
 		p.getTitle().click();Thread.sleep(2000);
 		p.getMr().click();Thread.sleep(1000);
 
-		//	p.getFirstName().sendKeys(name);
+			p.getFirstName().sendKeys(name);
 		char initial = name.charAt(2);
 		p.getMitName().sendKeys(Character.toString(initial).toUpperCase());
 		p.getLastName().sendKeys("TEST");
@@ -165,9 +166,9 @@ public class TestStar extends vizzaBase {
 		c.getAadhar().click();
 		c.getAdharNum().sendKeys("3245");
 		c.getDoc1().click();
-
+         
 		file();
-
+        scroll(4);
 		c.getIdproof().click();
 		c.getIdAadhar().click();
 		c.getAadharNumber2().sendKeys("3245");
@@ -360,6 +361,7 @@ public class TestStar extends vizzaBase {
 		
 	}
 
+@Test
 	public void com() throws InterruptedException, IOException, AWTException {
 		TestStar ts = new TestStar();
 		loginWithValidCredentials("sakthikrishnan106@gmail.com","Sakthi@1602");
@@ -411,9 +413,11 @@ public class TestStar extends vizzaBase {
 			e.printStackTrace();
 		}
 		sqp.getPopupNmae().sendKeys(name);
+		sqp.getLastName().sendKeys("Test");
+		scroll(4);
 		sqp.getPopupPhoneNumber().sendKeys("9025939106");
 		sqp.getPopupEmail().sendKeys(proposerEmailID);
-		until(1);scroll(2);
+		until(1);//scroll(2);
 		sqp.getPopupSubmitBtn().click();
 	}
 
@@ -472,7 +476,10 @@ public class TestStar extends vizzaBase {
 		if(i.getCopyLinkSubmitButton().isDisplayed()==false) {
 			scroll(60);
 		}
-		
+		for (int s =0;s<=60;s++) {
+			driver.findElement(By.tagName("html")).sendKeys(Keys.ARROW_DOWN);
+			}
+		  scroll(60);
 		i.getCopyLinkSubmitButton().click();
 
 	}
