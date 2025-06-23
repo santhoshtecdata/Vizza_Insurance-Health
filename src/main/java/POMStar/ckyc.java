@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class ckyc {
 	
-	@FindBy(xpath="/html/body/div[3]/div[2]/div/mat-dialog-container/form/div[1]/mat-radio-group/mat-radio-button[2]/label/span[2]")
+	@FindBy(xpath="/html/body/div[4]/div[2]/div/mat-dialog-container/form/div[1]/mat-radio-group/mat-radio-button[2]/label/span[2]")
 	WebElement ckycNO;
 	
 	@FindBy(xpath="(//input[@data-placeholder='PAN Number'])[3]")
@@ -33,13 +33,13 @@ public class ckyc {
 	@FindBy(xpath="(//span[text()=' Aadhaar Card '])[1]")
 	WebElement idAadhar;
 	
-	@FindBy(xpath="/html/body/div[3]/div[2]/div/mat-dialog-container/form/div[2]/div[4]/button/span[1]")
+	@FindBy(xpath="//input[@id='file1']")
 	WebElement Doc1;
 	
-	@FindBy(xpath="/html/body/div[3]/div[2]/div/mat-dialog-container/form/div[2]/div[8]/button/span[1]")
+	@FindBy(xpath="//input[@id='file2']")
 	WebElement doc2;
 	
-	@FindBy(xpath="/html/body/div[3]/div[2]/div/mat-dialog-container/form/div[2]/div[9]/button/span[1]")
+	@FindBy(xpath="//input[@id='file3']")
 	WebElement doc3 ;
 	
 	@FindBy(xpath="//span[text()='Submit']")

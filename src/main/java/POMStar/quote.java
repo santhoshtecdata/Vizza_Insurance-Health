@@ -7,7 +7,7 @@ public class quote {
 
 
 
-	@FindBy(xpath="(//mat-select-trigger[text()=' All (+ 4 others) '])[1]")
+	@FindBy(xpath="(//mat-select-trigger[text()=' All (+ 5 others) '])[1]")
 	WebElement filter;
 
 	@FindBy(xpath="//span[text()='Ok']")
@@ -25,7 +25,7 @@ public class quote {
 	@FindBy(xpath="(//span[text()='/Yr'])[1]")
 	WebElement assure;
 
-	@FindBy(xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-health-insurance/div[1]/div/div[3]/div/div[1]/div[4]/div/button/span[2]")
+	@FindBy(xpath="(//span[text()='/Yr'])[2]")
 	WebElement com;
 	
 	@FindBy(xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-health-insurance/div[1]/div/div[4]/div/div[1]/div[4]/div/button/span[1]/span/span")
@@ -49,7 +49,7 @@ public class quote {
 	@FindBy(xpath="(//span[text()='Select All'])[1]")
 	WebElement selectAllInFilter;
 	
-	@FindBy(xpath="/html/body/div[3]/div[1]")
+	@FindBy(xpath="/html/body/div[4]/div[1]")
 	WebElement dummy;
 	
 	@FindBy(xpath="")

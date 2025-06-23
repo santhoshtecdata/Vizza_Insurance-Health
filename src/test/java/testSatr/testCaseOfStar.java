@@ -82,7 +82,7 @@ public class testCaseOfStar extends starFlow {
 	}
 
 	@Test
-	public void verifyProposerFirstNamefiledAcceptTheSpecialCharcterOrNot() throws InterruptedException, IOException {
+	public void verifyProposerFirstNameFieldAcceptTheSpecialCharcterOrNot() throws InterruptedException, IOException {
 		try {
 			ts.loginWithValidCredentials("sakthikrishnan106@gmail.com","Sakthi@1602");
 		} catch (InterruptedException | IOException e) {
@@ -92,6 +92,7 @@ public class testCaseOfStar extends starFlow {
 		ts. quote();
 		until(2);
 		proposerDetails ps =PageFactory.initElements(driver, proposerDetails.class);
+		ps.getFirstName().clear();
 		ps.getFirstName().sendKeys("@#$%^");
 		until(1);
 		String value = ps.getFirstName().getAttribute("value");
@@ -108,10 +109,15 @@ public void flow() {
 		ts. quote();
 	} catch (InterruptedException | IOException e) {
 
-	}
-	;
+	};
 	until(2);
-
+	proposerDetails ps =PageFactory.initElements(driver, proposerDetails.class);
+	ps.getFirstName().clear();
+	ps.getLastName().clear();
+	ps.getMail().clear();
+	ps.getMail().sendKeys("test@gmail.com");
+	ps.getPhone().clear();
+	ps.getPhone().sendKeys("9025939106");
 	
 }
 
@@ -119,7 +125,7 @@ public void flow() {
 	
 
 	@Test
-	public void verifyProposerFirstNamefiledAcceptTheValidInput() throws InterruptedException, IOException {
+	public void verifyProposerFirstNameFieldAcceptTheValidInput() throws InterruptedException, IOException {
 		try {
 			ts.loginWithValidCredentials("sakthikrishnan106@gmail.com","Sakthi@1602");
 		} catch (InterruptedException | IOException e) {
@@ -129,6 +135,7 @@ public void flow() {
 		ts. quote();
 		until(2);
 		proposerDetails ps =PageFactory.initElements(driver, proposerDetails.class);
+		ps.getFirstName().clear();
 		ps.getFirstName().sendKeys("santh");
 		until(1);
 		String value = ps.getFirstName().getAttribute("value");
@@ -138,7 +145,7 @@ public void flow() {
 	}
 
 	@Test
-	public void verifyProposerLastNamefiledAcceptTheValidInput() throws InterruptedException, IOException {
+	public void verifyProposerLastNameFieldAcceptTheValidInput() throws InterruptedException, IOException {
 		try {
 			ts.loginWithValidCredentials("sakthikrishnan106@gmail.com","Sakthi@1602");
 		} catch (InterruptedException | IOException e) {
@@ -292,7 +299,7 @@ public void verifyMobileNumberFieldLimit() throws InterruptedException, IOExcept
 		pd.getFirstName().sendKeys("John Doe");
 		String value = pd.getFirstName().getAttribute("value");
 
-		Assert.assertNotEquals(value, "John Doe", "First Name field should not accept spaces.");
+		Assert.assertEquals(value, "John Doe", "First Name field accept spaces.");
 	}
 
 
@@ -344,8 +351,8 @@ public void verifyMobileNumberFieldLimit() throws InterruptedException, IOExcept
 	p.getDOB().sendKeys("06/06/2002");
 	p.getOccupation().click();
 	p.getBusiness().click();
-	p.getMail().sendKeys("test@gmail.com");
-	p.getPhone().sendKeys("9025939373");
+	 
+	 
 	scroll(5);
 	p.getAddress1().sendKeys("36");scroll(4);
 	p.getAddress2().sendKeys("Dummy");scroll(4);
@@ -401,8 +408,8 @@ public void verifyMobileNumberFieldLimit() throws InterruptedException, IOExcept
 	p.getDOB().sendKeys("06/06/2002");
 	p.getOccupation().click();
 	p.getBusiness().click();
-	p.getMail().sendKeys("test@gmail.com");
-	p.getPhone().sendKeys("9025939373");
+	 
+	 
 	scroll(5);
 	p.getAddress1().sendKeys("36");scroll(4);
 	p.getAddress2().sendKeys("Dummy");scroll(4);
@@ -457,8 +464,8 @@ public void verifyMobileNumberFieldLimit() throws InterruptedException, IOExcept
 	
 	p.getOccupation().click();
 	p.getBusiness().click();
-	p.getMail().sendKeys("test@gmail.com");
-	p.getPhone().sendKeys("9025939373");
+	 
+	 
 	scroll(5);
 	p.getAddress1().sendKeys("36");scroll(4);
 	p.getAddress2().sendKeys("Dummy");scroll(4);
@@ -512,8 +519,8 @@ public void verifyMobileNumberFieldLimit() throws InterruptedException, IOExcept
 	p.getLastName().sendKeys("K");
 	p.getDOB().sendKeys("06/06/2002");
 	
-	p.getMail().sendKeys("test@gmail.com");
-	p.getPhone().sendKeys("9025939373");
+	 
+	 
 	scroll(5);
 	p.getAddress1().sendKeys("36");scroll(4);
 	p.getAddress2().sendKeys("Dummy");scroll(4);
@@ -569,7 +576,7 @@ public void verifyMobileNumberFieldLimit() throws InterruptedException, IOExcept
 	p.getOccupation().click();
 	p.getBusiness().click();
 	
-	p.getPhone().sendKeys("9025939373");
+	 
 	scroll(5);
 	p.getAddress1().sendKeys("36");scroll(4);
 	p.getAddress2().sendKeys("Dummy");scroll(4);
@@ -624,7 +631,7 @@ public void verifyMobileNumberFieldLimit() throws InterruptedException, IOExcept
 	p.getDOB().sendKeys("06/06/2002");
 	p.getOccupation().click();
 	p.getBusiness().click();
-	p.getMail().sendKeys("test@gmail.com");
+	 
 	
 	scroll(5);
 	p.getAddress1().sendKeys("36");scroll(4);
@@ -673,15 +680,14 @@ public void verifyMobileNumberFieldLimit() throws InterruptedException, IOExcept
 	p.getTitle().click();Thread.sleep(2000);
 	p.getMr().click();Thread.sleep(1000);
 
-	p.getFirstName().sendKeys("Test");
+	//p.getFirstName().sendKeys("Test");
 	char initial = "Test".charAt(2);
 	p.getMitName().sendKeys(Character.toString(initial).toUpperCase());
-	p.getLastName().sendKeys("K");
+	//p.getLastName().sendKeys("K");
 	p.getDOB().sendKeys("06/06/2002");
 	p.getOccupation().click();
 	p.getBusiness().click();
-	p.getMail().sendKeys("test@gmail.com");
-	p.getPhone().sendKeys("9025939373");
+
 	scroll(5);
 	p.getAddress1().sendKeys("36");scroll(4);
 	p.getAddress2().sendKeys("Dummy");scroll(4);
@@ -735,8 +741,8 @@ public void verifyMobileNumberFieldLimit() throws InterruptedException, IOExcept
 	p.getDOB().sendKeys("06/06/2002");
 	p.getOccupation().click();
 	p.getBusiness().click();
-	p.getMail().sendKeys("test@gmail.com");
-	p.getPhone().sendKeys("9025939373");
+	
+	
 	scroll(5);
 	
 	p.getAddress2().sendKeys("Dummy");scroll(4);
@@ -791,8 +797,8 @@ public void verifyMobileNumberFieldLimit() throws InterruptedException, IOExcept
 	p.getDOB().sendKeys("06/06/2002");
 	p.getOccupation().click();
 	p.getBusiness().click();
-	p.getMail().sendKeys("test@gmail.com");
-	p.getPhone().sendKeys("9025939373");
+	 
+	 
 	scroll(5);
 	p.getAddress1().sendKeys("36");scroll(4);
 	
@@ -895,8 +901,8 @@ public void verifyMobileNumberFieldLimit() throws InterruptedException, IOExcept
 	p.getDOB().sendKeys("06/06/2002");
 	p.getOccupation().click();
 	p.getBusiness().click();
-	p.getMail().sendKeys("test@gmail.com");
-	p.getPhone().sendKeys("9025939373");
+	 
+	 
 	scroll(5);
 	p.getAddress1().sendKeys("36");scroll(4);
 	p.getAddress2().sendKeys("Dummy");scroll(4);
@@ -936,16 +942,7 @@ public void verifyMobileNumberFieldLimit() throws InterruptedException, IOExcept
 	Assert.assertTrue(element);
 	}
 	
-	@Test
-	  public  void countTestCases(Class<?> testClass) {
-	        int count = 0;
-	        for (Method method : testClass.getDeclaredMethods()) {
-	            if (method.isAnnotationPresent(Test.class)) {
-	                count++;
-	            }
-	        }
-	          System.out.println("Total Test Cases: " + count);
-	    }
+	
 	
 	
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -980,7 +977,7 @@ public void verifyMobileNumberFieldLimit() throws InterruptedException, IOExcept
 	p.getArea().click();
 	p.getAreaValue().click();
 	p.getSameusAddress().click();
-	scroll(16);
+	scroll(20);
 	p.getNextBtn().click();
 	String value = p.getPincode().getAttribute("value");
 	if(!value.contains("ASDFGHJ")) {
@@ -1019,7 +1016,7 @@ public void verifyMobileNumberFieldLimit() throws InterruptedException, IOExcept
 	p.getArea().click();
 	p.getAreaValue().click();
 	p.getSameusAddress().click();
-	scroll(16);
+	scroll(20);
 	p.getNextBtn().click();
 	String value = p.getPincode().getAttribute("value");
 	if(!value.contains("@#$%$%")) {

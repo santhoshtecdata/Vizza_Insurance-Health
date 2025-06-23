@@ -12,11 +12,17 @@ import org.testng.ITestResult;
 
 
 public class triggger implements ITestListener {
-   
+   public int numberOfTestCaseExecution =0;
     
 	public void onTestStart(ITestResult result) {
-		 System.out.println("Testing starting");
+		numberOfTestCaseExecution++;
+		 
 	}
+	
+	 public void onFinish(org.testng.ITestContext context) {
+	        System.out.println("Test Case Count : "+numberOfTestCaseExecution);
+	  }
+	 
     @Override
     public void onTestSuccess(ITestResult result) {
        
@@ -39,7 +45,7 @@ public class triggger implements ITestListener {
 	
 		}
     
-     vizzaBase. driver.quit();
+     vizzaBase.driver.quit();
     }
 
   

@@ -8,7 +8,7 @@
     <test name="Star product Test" thread-count="1">
         <classes>
        
-           <class name="testSatr.starFlow"> </class>
+           <class name="testSatr.testCaseOfStar"> </class>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

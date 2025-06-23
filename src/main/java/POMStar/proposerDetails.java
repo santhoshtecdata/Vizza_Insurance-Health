@@ -53,17 +53,17 @@ public class proposerDetails {
 	@FindBy(xpath="(//span[text()='Area'])[1]")
 	WebElement area;
 	
-	@FindBy(xpath="/html/body/div[3]/div[2]/div/div/div/mat-option/span")
+	@FindBy(xpath="/html/body/div[4]/div[2]/div/div/div/mat-option/span")
 	WebElement cityvalue;
 	
-	@FindBy(xpath="/html/body/div[3]/div[2]/div/div/div/mat-option[4]/span")
+	@FindBy(xpath="/html/body/div[4]/div[2]/div/div/div/mat-option[3]/span")
 	WebElement areaValue;
 	
 	@FindBy(xpath="(//span[text()='Next'])[1]")
 	WebElement nextBtn;
 	
 	
-	@FindBy(xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-star-health-proposal/section[1]/div/div/div[1]/mat-horizontal-stepper/div/div[2]/div[1]/form/mat-accordion/mat-expansion-panel/div/div/div/div[2]/div[2]/div/div[1]/div/mat-checkbox/label/span[1]")
+	@FindBy(xpath="/html/body/app-root/app-page/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-star-health-proposal/section[1]/div/div/div[1]/mat-horizontal-stepper/div/div[2]/div[1]/form/mat-accordion/mat-expansion-panel/div/div/div/div[2]/div[2]/div/div[1]/div/mat-checkbox/label/span[2]")
 	WebElement sameusAddress;
 	
 	@FindBy(xpath="//mat-icon[@mattooltip='Logout']")

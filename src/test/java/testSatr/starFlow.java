@@ -1,13 +1,23 @@
 package testSatr;
 
 import java.awt.AWTException;
+
 import java.io.IOException;
 
 import org.testng.annotations.Test;
 
 import vizza_insurence.vizzaBase;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
 
 public class starFlow extends vizzaBase{
 	
@@ -22,7 +32,7 @@ public class starFlow extends vizzaBase{
 		TestStar ts = new TestStar();
 		ts.assure();
 		test.pass("Assure plan proposal is created");
-		until(30);
+		until(10);
         ts.copy();
 		until(3);
 		driver.get("https://vizzainsurance.com/home");
@@ -35,10 +45,14 @@ public class starFlow extends vizzaBase{
 		ts.copy();
 		until(2);
 		ts.verifyCopyLink();
-		until(3);
+		until(15);
 		test.pass("star produts verifiyed");
-		
-			}
+		}
+	/*
+	@Test
+	public void chat() {
+		driver.get("https://chatgpt.com/");}
+	*/
 	
 	/*
 	
@@ -59,9 +73,9 @@ public class starFlow extends vizzaBase{
 		pri("done");
 		
 	}
-*/
 	
+*/	}
 	
-}
+
 
 

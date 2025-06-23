@@ -3,31 +3,44 @@
 <suite thread-count="1" parallel="methods" name="Failed suite [SampleSuite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="testSatr.triggger"/>
-    <listener class-name="vizza_insurence.transForm"/>
   </listeners>
   <test thread-count="1" parallel="methods" name="SampleTest(failed)">
     <classes>
-      <class name="TATA_AIG.proposerPageTestCase">
+      <class name="testSatr.testCaseOfStar">
         <methods>
-          <include name="verifyTryToMoveNextPageWhenNotProvideLastName"/>
+          <include name="verifyTryToMoveNextpageWhenNotProvideAddress2"/>
+          <include name="verifyTryToMoveNextpageWhenNotProvideAddress1"/>
+          <include name="verifyTryToMoveNextpageWhenNotProvideAnyMandatoryFields"/>
           <include name="afterMethod"/>
+          <include name="verifyproposerPageNextbuttonFunctionality"/>
+          <include name="verifyTryToMoveNextpageWhenNotProvidePincode"/>
+          <include name="verifyThePincodeFieldAcceptTheChracters"/>
           <include name="beforeMethod"/>
+          <include name="verifyThePincodeFieldAcceptTheSpecialChracters"/>
         </methods>
-      </class> <!-- TATA_AIG.proposerPageTestCase -->
-      <class name="TATA_AIG.nomineePageTestCase">
+      </class> <!-- testSatr.testCaseOfStar -->
+      <class name="testSatr.comprehensiveTestCase">
         <methods>
-          <include name="verifyTheNomineeNameFieldNotAcceptNumbers"/>
+          <include name="verifyTryToMoveNextpageWhenNotProvideOccupationInStarComPlan"/>
+          <include name="verifyTryToMoveNextpageWhenNotProvidePhoneNumberInStarComPlan"/>
+          <include name="verifyproposerPageNextbuttonFunctionalityInStarComPlan"/>
+          <include name="verifyTryToMoveNextpageWhenNotProvideAddress2InStarComPlan"/>
           <include name="afterMethod"/>
+          <include name="verifyTryToMoveNextpageWhenNotProvideFirstNameInStarComPlan"/>
+          <include name="verifyTryToMoveNextpageWhenNotProvideDOBInStarComPlan"/>
+          <include name="verifyTryToMoveNextpageWhenNotProvideAnyMandatoryFieldsInStarComPlan"/>
+          <include name="verifyAllOccupationIsClickableInStarComPlan"/>
+          <include name="verifyFirstNameRejectsSpacesInStarComPlan"/>
+          <include name="verifyThePincodeFieldAcceptTheChractersInStarComPlan"/>
+          <include name="verifyTryToMoveNextpageWhenNotProvideLastNameInStarComPlan"/>
+          <include name="verifyTryToMoveNextpageWhenNotProvideMailInStarComPlan"/>
+          <include name="verifyThePincodeFieldAcceptTheSpecialChractersInStarComPlan"/>
+          <include name="verifyTryToMoveNextpageWhenNotProvidePincodeInStarComPlan"/>
+          <include name="vreifyProposerFirstNameFieldAcceptTheAlphabetCharactersInStarComPlan"/>
           <include name="beforeMethod"/>
+          <include name="makePolicy"/>
         </methods>
-      </class> <!-- TATA_AIG.nomineePageTestCase -->
-      <class name="TATA_AIG.insuredPageTestCase">
-        <methods>
-          <include name="verifyTheWeughtFieldAcceptTheSpecialCharctersOrNot"/>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-        </methods>
-      </class> <!-- TATA_AIG.insuredPageTestCase -->
+      </class> <!-- testSatr.comprehensiveTestCase -->
     </classes>
   </test> <!-- SampleTest(failed) -->
 </suite> <!-- Failed suite [SampleSuite] -->

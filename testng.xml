@@ -12,9 +12,9 @@
                   <class name="testSatr.TestStar"></class>
            
            <class name="vizza_insurence_ICICI_Travel.ICICI_travel_induvidul"></class>
-          
-            <class name="testSatr.starFlow"></class>    -->
-            <class name="testSatr.testCaseOfStar"></class>
+          <class name="testSatr.testCaseOfStar"></class> -->		
+            <class name="testSatr.testCaseOfStar"></class>    
+              <class name="testSatr.comprehensiveTestCase"></class> 
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
