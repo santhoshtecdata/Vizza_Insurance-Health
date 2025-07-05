@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class ckyc {
 	
-	@FindBy(xpath="/html/body/div[4]/div[2]/div/mat-dialog-container/form/div[1]/mat-radio-group/mat-radio-button[2]/label/span[2]")
+	@FindBy(xpath="/html/body/div[5]/div[2]/div/mat-dialog-container/form/div[1]/mat-radio-group/mat-radio-button[2]/label/span[2]")
 	WebElement ckycNO;
 	
 	@FindBy(xpath="(//input[@data-placeholder='PAN Number'])[3]")

@@ -53,10 +53,10 @@ public class proposerDetails {
 	@FindBy(xpath="(//span[text()='Area'])[1]")
 	WebElement area;
 	
-	@FindBy(xpath="/html/body/div[4]/div[2]/div/div/div/mat-option/span")
+	@FindBy(xpath="/html/body/div[5]/div[2]/div/div/div/mat-option/span")
 	WebElement cityvalue;
 	
-	@FindBy(xpath="/html/body/div[4]/div[2]/div/div/div/mat-option[3]/span")
+	@FindBy(xpath="/html/body/div[5]/div[2]/div/div/div/mat-option[3]/span")
 	WebElement areaValue;
 	
 	@FindBy(xpath="(//span[text()='Next'])[1]")

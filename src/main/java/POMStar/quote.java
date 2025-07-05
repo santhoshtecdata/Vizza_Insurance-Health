@@ -49,7 +49,7 @@ public class quote {
 	@FindBy(xpath="(//span[text()='Select All'])[1]")
 	WebElement selectAllInFilter;
 	
-	@FindBy(xpath="/html/body/div[4]/div[1]")
+	@FindBy(xpath="/html/body/div[5]/div[1]")
 	WebElement dummy;
 	
 	@FindBy(xpath="")

@@ -130,7 +130,7 @@ public class vizzaBase {
 		
 		
 		report.flush();
-		driver.quit();
+	//	driver.quit();
 	}
 
 	public void takeScreenshot(String name) throws IOException {
